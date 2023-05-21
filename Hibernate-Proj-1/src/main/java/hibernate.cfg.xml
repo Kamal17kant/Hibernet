@@ -7,10 +7,12 @@
 		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
 		<property name="connection.username">kamal</property>
 		<property name="connection.password">123</property>
-		<property name="dialect">org.hibernate.dialect.Oracle8iDialect</property>
+		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
 <!-- 		use to create table if not available or update if available -->
-		<property name="hbm2ddl.auto">update</property>
+		<property name="hbm2ddl.auto">create</property>
 <!-- 		show which query is created by hibernate -->
 		<property name="show_sql">true</property>
+		<mapping class="com.kamal.table.Student"/>
+		<mapping class="com.kamal.table.Address"/>
 	</session-factory>
 </hibernate-configuration>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
+		<property name="connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+		<property name="connection.username">kamal</property>
+		<property name="connection.password">123</property>
+		<property name="dialect">org.hibernate.dialect.OracleDialect</property>
+<!-- 		use to create table if not available or update if available -->
+		<property name="hbm2ddl.auto">create</property>
+<!-- 		show which query is created by hibernate -->
+		<property name="show_sql">true</property>
+		<mapping class="com.kamal.table.Student"/>
+		
+	</session-factory>
+</hibernate-configuration>
